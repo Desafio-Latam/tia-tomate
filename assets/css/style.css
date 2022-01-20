@@ -353,6 +353,7 @@ body {
   font-weight: 700;
   font-size: 30px;
   line-height: normal;
+  cursor: pointer;
   -webkit-border-radius: 35px;
   -moz-border-radius: 35px;
   -ms-border-radius: 35px;
