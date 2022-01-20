@@ -1,0 +1,205 @@
+body {
+  background-color: $snow;
+}
+
+//primer cuadrado Salmón
+
+.article-salmon {
+  background-color: $salmon;
+  color: $snow;
+  text-align: center;
+  padding: 200px 0px;
+  line-height: normal;
+
+  &__parrafo {
+    font-family: $raleway;
+    font-weight: $ralewayExtraLight;
+    font-size: $fz-xx-large;
+  }
+}
+.article {
+  &__salmonlack {
+    font-family: $raleway;
+    font-weight: $ralewayBold;
+  }
+}
+
+/*segundo article*/
+.article-gray {
+  padding: 80px 130px;
+  background-color: $taupeGray;
+
+  &__image {
+    max-width: 1000px;
+  }
+  &__paragraph {
+    color: $snow;
+    font-size: $fz-medium;
+    font-family: $raleway;
+    font-weight: $ralewayExtraLight;
+    padding: 0px 25px;
+    /* Arriba | Derecha | Abajo | Izquierda */
+    margin: auto 50px auto 50px;
+    width: 80%;
+  }
+  &__tittle {
+    padding: 37px;
+    color: $white;
+    font-size: $fz-large;
+    line-height: normal;
+    text-align: center;
+    font-family: $raleway;
+    font-weight: $ralewayBold;
+  }
+}
+
+/*Tercer Articulo*/
+.article-white {
+  padding: 80px 130px;
+  background-color: $snow;
+
+  &__image {
+    max-width: 1000px;
+  }
+  &__paragraph {
+    text-align: justify;
+    color: $graniteGray;
+    font-size: $fz-medium;
+    font-family: $raleway;
+    font-weight: $ralewayExtraLight;
+    padding: 0px 25px;
+    /* Arriba | Derecha | Abajo | Izquierda */
+    margin: auto 50px auto 50px;
+    width: 80%;
+  }
+  &__title {
+    padding: 37px;
+    color: $graniteGray;
+    font-size: $fz-large;
+    line-height: normal;
+    text-align: center;
+    font-family: $raleway;
+    font-weight: $ralewayBold;
+  }
+}
+
+/*Cuarto Articulo*/
+.nosotros {
+  background-color: $salmon;
+  color: $snow;
+  text-align: center;
+  padding: 50px 0px;
+  line-height: normal;
+
+  &__title {
+    font-family: $raleway;
+    font-weight: $ralewayBold;
+    font-size: $fz-large;
+    line-height: normal;
+  }
+}
+/*Seccion Tia Tomate*/
+.tia-tomate {
+  padding: 0px 150px;
+  background-color: $snow;
+  line-height: normal;
+  text-align: center;
+  &__foto {
+    max-width: 400px;
+  }
+  &__paragraph {
+    text-align: justify;
+    color: $graniteGray;
+    font-size: $fz-medium;
+    font-family: $raleway;
+    font-weight: $ralewayExtraLight;
+    padding: 0px 25px;
+    /* Arriba | Derecha | Abajo | Izquierda */
+    margin: auto;
+    width: 70%;
+    margin-bottom: 30px;
+  }
+  &__title {
+    font-family: $raleway;
+    font-weight: $ralewayBold;
+    font-size: $fz-large;
+    line-height: normal;
+  }
+}
+/*Sección Tio Tomate*/
+
+.tio-tomate {
+  padding: 0px 150px;
+  background-color: $snow;
+  line-height: normal;
+  text-align: center;
+  &__paragraph {
+    text-align: justify;
+    color: $graniteGray;
+    font-size: $fz-medium;
+    font-family: $raleway;
+    font-weight: $ralewayExtraLight;
+    padding: 0px 25px;
+    /* Arriba | Derecha | Abajo | Izquierda */
+    margin: auto;
+    width: 70%;
+    margin-bottom: 50px;
+  }
+  &__photo {
+    max-width: 400px;
+  }
+  &__title {
+    font-family: $raleway;
+    font-weight: $ralewayBold;
+    font-size: $fz-large;
+    line-height: normal;
+  }
+}
+
+/* Sección Tomates para su negocio*/
+.botones {
+  background-color: $salmon;
+  color: $snow;
+  text-align: center;
+  padding: 50px 0px;
+  line-height: normal;
+  &__button {
+    margin-top: 15px;
+    background-color: $snow;
+    border-radius: 35px;
+    color: $graniteGray;
+    padding: 15px 72px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: $raleway;
+    font-weight: $ralewayBold;
+    font-size: $fz-medium-l;
+    line-height: normal;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    -ms-border-radius: 35px;
+    -o-border-radius: 35px;
+  }
+  &__title {
+    font-family: $raleway;
+    font-weight: $ralewayBold;
+    font-size: $fz-large;
+    line-height: normal;
+  }
+}
+
+/* footer */
+.tomate {
+  
+  padding: 40px 150px;
+  background-color: $graniteGray;
+  line-height: normal;
+  text-align: center;
+
+  &__image {
+    max-width: 200px;
+  }
+ 
+}

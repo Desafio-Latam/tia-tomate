@@ -1,0 +1,379 @@
+@charset "UTF-8";
+:root {
+  --color-primario: #181818;
+  --color-secundario: #f0f0f0;
+  /* Tipografía */
+  --tipo-principal: Helvetica, Arial, sans-serif;
+  --tipo-secundaria: Verdana;
+}
+
+/* Las adaptamos al modo oscuro */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primario: #f0f0f0;
+    --color-secundario: #181818;
+  }
+}
+/* Opcional */
+/* Configuramos si un usuario ha activado el modo alto contraste. (WD) */
+@media (prefers-contrast: high) {
+  :root {
+    --color-primario: black;
+    --color-secundario: white;
+  }
+}
+/* Opcional */
+/* Desactivamos los animations en el caso de que el usuario haya configurado el modo sin animation */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none;
+    transition: none;
+  }
+}
+/* Reseteamos los margin y paddings de todas las etiquetas */
+/* Cuidado con el uso del *. Normalmente se se debe de usar en selectores al maquetar. Pero usar alguno para resetear y evitarnos problemas no es mala opción. Tú eliges. */
+/* 
+Puedes elegir usar: *{}
+Puedes elegir usar esto: 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video , button, button{}
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, button, button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+/* Evitamos problemas con las imagenes */
+img, picture, video, iframe, figure {
+  max-width: 100%;
+  width: 100%;
+  /*display: block;*/
+  /* opcional */
+  object-fit: cover;
+  /* opcional */
+  object-position: center center;
+}
+
+/* Reseteamos los enlaces para funcionar como cajas... */
+a {
+  display: block;
+}
+
+/* ... excepto los que se encuentran en párrafos */
+p a {
+  display: inline;
+}
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+
+/* Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+  font-size: 1em;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Evitamos problemas con los pseudoelementos de quotes */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+/* Configuramos el texto que seleccionamos */
+::selection {
+  /*background-color: var(--color-primario);*/
+  /*color: var(--color-secundario);*/
+}
+
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form, input, textarea, select, button, label {
+  font-family: inherit;
+  font-size: inherit;
+  hyphens: auto;
+  background-color: transparent;
+  display: block;
+  color: inherit;
+  /* opcional */
+  appearance: none;
+}
+
+/* Reseteamos las tablas */
+table, tr, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Evitamos problemas con los SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+/* (Probándolo, no usar en producción) En el caso de añadir una  */
+/* p svg{
+  display: inline;
+  width: initial;
+} */
+/* Configuramos la tipografía para toda la web */
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  font-family: var(--tipo-principal);
+  color: var(--color-primario);
+  /*background-color: var(--color-secundario);*/
+  /* opcional */
+  line-height: 1.4em;
+  /* opcional */
+  hyphens: auto;
+  /* opcional */
+  font-smooth: always;
+  /* opcional */
+  -webkit-font-smoothing: antialiased;
+  /* opcional */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.header {
+  top: 0;
+  background: #fff;
+}
+.header__logo-wraper {
+  max-width: 200px;
+  margin: 20px 80px;
+}
+
+body {
+  background-color: #fafafa;
+}
+
+.article-salmon {
+  background-color: #E97f72;
+  color: #fafafa;
+  text-align: center;
+  padding: 200px 0px;
+  line-height: normal;
+}
+.article-salmon__parrafo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 200;
+  font-size: 100px;
+}
+
+.article__salmonlack {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+}
+
+/*segundo article*/
+.article-gray {
+  padding: 80px 130px;
+  background-color: #91918D;
+}
+.article-gray__image {
+  max-width: 1000px;
+}
+.article-gray__paragraph {
+  color: #fafafa;
+  font-size: 18px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 200;
+  padding: 0px 25px;
+  /* Arriba | Derecha | Abajo | Izquierda */
+  margin: auto 50px auto 50px;
+  width: 80%;
+}
+.article-gray__tittle {
+  padding: 37px;
+  color: #fff;
+  font-size: 50px;
+  line-height: normal;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+}
+
+/*Tercer Articulo*/
+.article-white {
+  padding: 80px 130px;
+  background-color: #fafafa;
+}
+.article-white__image {
+  max-width: 1000px;
+}
+.article-white__paragraph {
+  text-align: justify;
+  color: #686963;
+  font-size: 18px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 200;
+  padding: 0px 25px;
+  /* Arriba | Derecha | Abajo | Izquierda */
+  margin: auto 50px auto 50px;
+  width: 80%;
+}
+.article-white__title {
+  padding: 37px;
+  color: #686963;
+  font-size: 50px;
+  line-height: normal;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+}
+
+/*Cuarto Articulo*/
+.nosotros {
+  background-color: #E97f72;
+  color: #fafafa;
+  text-align: center;
+  padding: 50px 0px;
+  line-height: normal;
+}
+.nosotros__title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: normal;
+}
+
+/*Seccion Tia Tomate*/
+.tia-tomate {
+  padding: 0px 150px;
+  background-color: #fafafa;
+  line-height: normal;
+  text-align: center;
+}
+.tia-tomate__foto {
+  max-width: 400px;
+}
+.tia-tomate__paragraph {
+  text-align: justify;
+  color: #686963;
+  font-size: 18px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 200;
+  padding: 0px 25px;
+  /* Arriba | Derecha | Abajo | Izquierda */
+  margin: auto;
+  width: 70%;
+  margin-bottom: 30px;
+}
+.tia-tomate__title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: normal;
+}
+
+/*Sección Tio Tomate*/
+.tio-tomate {
+  padding: 0px 150px;
+  background-color: #fafafa;
+  line-height: normal;
+  text-align: center;
+}
+.tio-tomate__paragraph {
+  text-align: justify;
+  color: #686963;
+  font-size: 18px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 200;
+  padding: 0px 25px;
+  /* Arriba | Derecha | Abajo | Izquierda */
+  margin: auto;
+  width: 70%;
+  margin-bottom: 50px;
+}
+.tio-tomate__photo {
+  max-width: 400px;
+}
+.tio-tomate__title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: normal;
+}
+
+/* Sección Tomates para su negocio*/
+.botones {
+  background-color: #E97f72;
+  color: #fafafa;
+  text-align: center;
+  padding: 50px 0px;
+  line-height: normal;
+}
+.botones__button {
+  margin-top: 15px;
+  background-color: #fafafa;
+  border-radius: 35px;
+  color: #686963;
+  padding: 15px 72px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: normal;
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  -ms-border-radius: 35px;
+  -o-border-radius: 35px;
+}
+.botones__title {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  line-height: normal;
+}
+
+/* footer */
+.tomate {
+  padding: 40px 150px;
+  background-color: #686963;
+  line-height: normal;
+  text-align: center;
+}
+.tomate__image {
+  max-width: 200px;
+}
+
+/*# sourceMappingURL=style.css.map */
